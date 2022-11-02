@@ -6,11 +6,7 @@ public class ProductList {
 
 
     public void addProducts(Product product) {
-        if (products.contains(product)) {
-            throw new ProductException("Повторяющийся продукт");
-        } else {
-            products.add(product);
-        }
+        products.add(product);
     }
 
     public void removeProducts(Product product) {
@@ -22,7 +18,6 @@ public class ProductList {
     public void checkProducts(String name) {
         for (Product product : products) {
             if (product.getName().equals(name)) {
-                product.setChecked();
                 break;
             }
         }
