@@ -20,14 +20,14 @@ public class Recipe {
         return products;
     }
 
-    public static void addProduct(Product product, int productQuantity, Map<Product, Integer> products) {
+    public void addProduct(Product product, int productQuantity) {
         if (productQuantity == 0) {
             productQuantity = 1;
         }
         if (product == null) {
             throw new IllegalArgumentException("Нет продукта");
         } else {
-            products.putIfAbsent(product, productQuantity);
+            this.products.putIfAbsent(product, productQuantity);
         }
     }
 
